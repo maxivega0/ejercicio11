@@ -11,7 +11,7 @@ function App() {
     <Container>
       <h1 className='my-5 text-center'>Portal de Noticias</h1>
       <Formulario/>
-      <Noticia></Noticia>
+      {/* <Noticia></Noticia> */}
     </Container>
     </>
   )
