@@ -15,7 +15,7 @@ const Formulario = () => {
   const consultarAPI = async () => {
     try {
       const respuesta = await fetch(
-        `https://newsdata.io/api/1/news?apikey=pub_24223d78f037e8be1be6f46aaaf31129c76cf&q=${categoria}`
+        `https://newsdata.io/api/1/news?apikey=pub_24223d78f037e8be1be6f46aaaf31129c76cf&category=${categoria}`
       );
       const dato = await respuesta.json();
       await setNoticias(dato);
@@ -39,7 +39,7 @@ const Formulario = () => {
             <option>Elige que tipo de noticia te interesa</option>
             <option value="business">Negocios</option>
             <option value="entertainment">Entretenimiento</option>
-            <option value="general">General</option>
+            <option value="world">Globales</option>
             <option value="health">Salud</option>
             <option value="science">Ciencia</option>
             <option value="sports">Deportes</option>
