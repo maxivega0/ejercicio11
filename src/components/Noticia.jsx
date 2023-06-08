@@ -11,14 +11,14 @@ const Noticia = ({ noticia }) => {
   return (
     <>
       <Card className="my-2 col-12 col-md-4">
-        <Card.Header className="h-100">
+        <Card.Header className="">
           <img
             src={
               noticia.urlToImage ||
               "https://mmercantil.com.pe/wp-content/plugins/ninja-forms/assets/img/no-image-available-icon-6.jpg"
             }
             alt={noticia.title}
-            className="img-fluid h-100"
+            className="card-img-top h-100 img-fluid"
           />
         </Card.Header>
         <Card.Body>
