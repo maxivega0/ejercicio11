@@ -15,11 +15,12 @@ const Formulario = () => {
   const consultarAPI = async () => {
     try {
       const respuesta = await fetch(
-        `https://newsapi.org/v2/top-headlines?category=${categoriaSeleccionada}&apiKey=d72483e4c0c7432ebb75a3f8b6b716f5`
+        `https://newsdata.io/api/1/news?apikey=pub_24223d78f037e8be1be6f46aaaf31129c76cf&q=${categoria}`
       );
       const dato = await respuesta.json();
       await setNoticias(dato);
       setMostrarNoticias(true);
+      console.log(dato);
     } catch (error) {
       console.log(error);
     }
@@ -55,7 +56,7 @@ const Formulario = () => {
         </Form.Group>
       </Form>
       <Container className="row">
-        {mostrarNoticias && <ListaNoticias noticias={noticias.articles} />}
+        {mostrarNoticias && <ListaNoticias noticias={noticias.results} />}
       </Container>
     </>
   );

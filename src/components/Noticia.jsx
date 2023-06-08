@@ -14,7 +14,7 @@ const Noticia = ({ noticia }) => {
         <Card.Header className="">
           <img
             src={
-              noticia.urlToImage ||
+              noticia.image_url ||
               "https://mmercantil.com.pe/wp-content/plugins/ninja-forms/assets/img/no-image-available-icon-6.jpg"
             }
             alt={noticia.title}
@@ -30,7 +30,7 @@ const Noticia = ({ noticia }) => {
         <Card.Footer className="text-center">
           <Button variant="primary">
             <a
-              href={noticia.url}
+              href={noticia.link}
               target="_blank"
               rel="noreferrer"
               className="nav-link"
