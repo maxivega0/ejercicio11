@@ -1,22 +1,19 @@
 /* eslint-disable react/prop-types */
-import { ListGroup } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Noticia from "./Noticia";
 
 const ListaNoticias = ({ noticias }) => {
-
-    // Envio nuevamente el prop al siguiente hijo itemtarea
-    return (
-        <ListGroup>
-  {
-    noticias.map((noticia, indiceNoticia) => (
-      <Noticia
-        noticia={noticia}
-        key={indiceNoticia}
-      />
-    ))
-  }
-      </ListGroup>
-    );
-  };
+  return (
+    <Container className="row justify-content-center">
+      {noticias.map((noticia, indiceNoticia) => (
+        <Noticia
+          noticia={noticia}
+          key={indiceNoticia}
+          className="col-12 col-md-4"
+        />
+      ))}
+    </Container>
+  );
+};
 
 export default ListaNoticias;
